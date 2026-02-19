@@ -1,17 +1,208 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 
+const phone = "(323) 944-1010"; // update if different
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="SHBA Capital | Business Funding">
+  <Header />
+
+  <main>
+    <!-- HERO -->
+    <section class="section hero">
+      <div class="container hero-grid">
+        <div class="stack">
+          <p class="eyebrow">Business Loans • Credit Lines • Working Capital</p>
+          <h1 class="h1">Same-week business funding, built for real operators.</h1>
+          <p class="lede">
+            SHBA Capital helps business owners explore flexible capital options with a clear process and
+            responsive support. No fluff, no mystery steps.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn primary" href="#contact">Get Started</a>
+            <a class="btn" href="#services">View Options</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="pill">Fast turnaround</div>
+            <div class="pill">Flexible products</div>
+            <div class="pill">Guided process</div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Quick facts">
+          <h2 class="h4">Quick Snapshot</h2>
+          <ul class="checklist">
+            <li>Funding options from small to large requests</li>
+            <li>Use of funds: payroll, inventory, expansion, equipment</li>
+            <li>Simple document checklist and guided submission</li>
+          </ul>
+
+          <div class="callbox">
+            <span class="muted">Prefer the phone?</span>
+            <a class="callnow" href={`tel:${phone.replace(/[^\d+]/g, "")}`}>Call {phone}</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <p class="kicker">Flexible capital, aligned to your cash flow</p>
+        <h2 class="h2">Funding Options</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3 class="h4">Business Line of Credit</h3>
+            <p class="muted">Revolving access to capital for working needs and opportunity spend.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="h4">Working Capital</h3>
+            <p class="muted">Term-based options to support operations, payroll, and growth cycles.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="h4">Equipment Financing</h3>
+            <p class="muted">Preserve cash while upgrading vehicles, machinery, and essential tools.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="h4">SBA-Oriented Solutions</h3>
+            <p class="muted">Longer-term structures when qualification and timing make sense.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="h4">Revenue-Based Financing</h3>
+            <p class="muted">Repayment designed to move with revenue performance in many cases.</p>
+          </article>
+
+          <article class="card">
+            <h3 class="h4">Merchant Cash Advance</h3>
+            <p class="muted">Speed-focused options for businesses prioritizing time-to-funds.</p>
+          </article>
+        </div>
+
+        <div class="center mt">
+          <a class="btn primary" href="#contact">Talk to a Funding Specialist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section alt" id="how">
+      <div class="container">
+        <p class="kicker">A simple path from inquiry to capital</p>
+        <h2 class="h2">3 Steps</h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3 class="h4">Share the basics</h3>
+            <p class="muted">Tell us what you’re looking to accomplish and your preferred timeline.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3 class="h4">Review options</h3>
+            <p class="muted">We walk through potential structures and what each one means in practice.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3 class="h4">Close and fund</h3>
+            <p class="muted">Finalize documentation and route funds per the selected program.</p>
+          </div>
+        </div>
+
+        <div class="note">
+          <strong>Reality check:</strong> timelines vary by product, documentation, and underwriting.
+          Anyone guaranteeing “instant” anything is usually selling you something else.
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <p class="kicker">What business owners care about: clarity and speed</p>
+        <h2 class="h2">Client Notes</h2>
+
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>
+              “Clear communication and no surprise steps. We picked an option that matched our cash flow and moved quickly.”
+            </blockquote>
+            <figcaption class="muted">Operations Lead • Logistics</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote>
+              “They explained tradeoffs in plain English, which is rare in finance. Funding helped us stabilize inventory.”
+            </blockquote>
+            <figcaption class="muted">Owner • Retail</figcaption>
+          </figure>
+
+          <figure class="quote">
+            <blockquote>
+              “Equipment upgrade without gutting working capital. Straightforward process, responsive team.”
+            </blockquote>
+            <figcaption class="muted">Founder • Home Services</figcaption>
+          </figure>
+        </div>
+
+        <div class="center mt">
+          <a class="btn" href="#faq">Read the FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section alt" id="faq">
+      <div class="container">
+        <p class="kicker">Fast answers for common questions</p>
+        <h2 class="h2">FAQ</h2>
+
+        <details class="faq">
+          <summary>How do I get started?</summary>
+          <div class="muted">Use the contact section below. We’ll confirm your goals and outline next steps and document needs.</div>
+        </details>
+
+        <details class="faq">
+          <summary>Can funds be used for any business purpose?</summary>
+          <div class="muted">Often yes. Common uses include payroll, inventory, equipment, marketing, and expansion, depending on product rules.</div>
+        </details>
+
+        <details class="faq">
+          <summary>Is collateral required?</summary>
+          <div class="muted">Many options are unsecured, but some structures may require collateral depending on size and profile.</div>
+        </details>
+
+        <details class="faq">
+          <summary>How does repayment work?</summary>
+          <div class="muted">Repayment cadence varies by product. Some are daily/weekly ACH; others are monthly, like traditional term structures.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT STRIP -->
+    <section class="section cta">
+      <div class="container cta-bar">
+        <div>
+          <h2 class="h3">Talk to SHBA Capital</h2>
+          <p class="muted">Get a quick overview of options and the cleanest path forward.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn primary" href="#contact">Get Started</a>
+          <a class="btn" href={`tel:${phone.replace(/[^\d+]/g, "")}`}>Call</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</BaseLayout>

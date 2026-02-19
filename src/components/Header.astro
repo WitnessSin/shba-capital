@@ -1,0 +1,38 @@
+---
+import { nav } from "../config/nav";
+const phone = "(323) 944-1010"; // change if SHBA Capital uses a different line
+const hours = "Mon–Fri / 7am–5pm (PST)";
+---
+
+<header class="site-header">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="muted">{hours}</span>
+      <a class="topbar-cta" href={`tel:${phone.replace(/[^\d+]/g, "")}`}>CALL NOW {phone}</a>
+    </div>
+  </div>
+
+  <div class="navwrap">
+    <div class="container nav-inner">
+      <a class="brand" href="#" aria-label="SHBA Capital home">
+        <img 
+         class="brand-mark" 
+         src="/assets/shba-capital-logo.png" 
+        alt="SHBA Capital Logo" 
+        />
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="navlist">
+          {nav.map((item) => (
+            <li><a class="navlink" href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a class="btn primary" href="#contact">Get Started</a>
+      </div>
+    </div>
+  </div>
+</header>

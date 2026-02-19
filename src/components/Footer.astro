@@ -1,0 +1,47 @@
+---
+const phone = "(323) 944-1010"; // update if different
+const email = "contact@shbacapital.com"; // update if different
+const addressLines = ["Orange County, CA"]; // update if you want a real address
+---
+
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h3 class="h4">SHBA Capital</h3>
+      <p class="muted">
+        Flexible business funding options with a simple, guided process.
+      </p>
+      <div class="contact">
+        <a href={`tel:${phone.replace(/[^\d+]/g, "")}`}>{phone}</a>
+        <a href={`mailto:${email}`}>{email}</a>
+        {addressLines.map((l) => <span class="muted">{l}</span>)}
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="h5">Links</h4>
+      <ul class="footlinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="h5">Disclosures</h4>
+      <p class="fineprint">
+        SHBA Capital is not a bank. Financing is subject to eligibility and underwriting.
+        Terms, rates, and funding timelines vary by product and applicant profile. Nothing on this
+        site is a commitment to lend.
+      </p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span class="muted">© {new Date().getFullYear()} SHBA Capital. All rights reserved.</span>
+    <div class="footer-legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </div>
+  </div>
+</footer>

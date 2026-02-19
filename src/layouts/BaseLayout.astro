@@ -1,0 +1,18 @@
+---
+const { title = "SHBA Capital" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content="Flexible business funding options through SHBA Capital." />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
